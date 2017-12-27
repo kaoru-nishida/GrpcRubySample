@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package tell;
+
+service DeviceConfirmation {
+    rpc DeviceConfirmation (DeviceInfo) returns (Result) {}
+}
+
+enum ApplicationType {
+    NONE = 0;
+    ANDROID = 1;
+    ANDROID_ALPHA = 2;
+    ANDROID_BETA = 3;
+    ANDROID_RC = 4;
+    IOS =5;
+    IOS_ALPHA = 6;
+    IOS_BETA = 7;
+    IOS_RC = 8;
+    BOT = 9;
+    BOT_ALPHA = 10;
+    BOT_BETA = 11;
+    BOT_RC = 12;
+    WEB = 13;
+    WEB_ALPHA = 14;
+    WEB_BETA = 15;
+    WEB_RC = 16;
+}
+
+message DeviceInfo {
+    string deviceName = 1;
+    string systemName = 2;
+    string systemVersion = 3;
+    string model = 4;
+    ApplicationType applicationType = 5;
+}
+
+message Result {
+    string result = 1;
+}
