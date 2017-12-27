@@ -14,14 +14,14 @@ require 'Main_services_pb'
 # GreeterServer is simple server that implements the Helloworld Greeter server.
 class Server < Tell::DeviceConfirmation::Service
   def device_confirmation(req, _unused_call)
-    #p "-> 送られてきたデータ"
-    #p "deviceName : #{req.deviceName}"
-    #p "systemName : #{req.systemName}"
-    #p "systemVersion : #{req.systemVersion}"
-    #p "model : #{req.model}"
-    #p "applicationType : #{req.applicationType}"
+    p "-> 送られてきたデータ"
+    p "deviceName : #{req.deviceName}"
+    p "systemName : #{req.systemName}"
+    p "systemVersion : #{req.systemVersion}"
+    p "model : #{req.model}"
+    p "applicationType : #{req.applicationType}"
     #p ""
-    p "#{_unused_call.peer}"
+    #p "#{_unused_call.peer}"
     Tell::Result.new(result: "OK")
   end
 end
