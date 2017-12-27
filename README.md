@@ -37,8 +37,8 @@ C++ Protocol Buffer RuntimeとProtocol Buffer Compiler(protoc)をビルドして
 以下を実行します：
 
     $ ./configure
-    $ make
-    $ make check
+    $ make # SSDでも時間かかります。注意してください
+    $ make check # SSDでも少し時間かかります。
     $ sudo make install
     $ sudo ldconfig  # 共有ライブラリキャッシュをリフレッシュする
 
